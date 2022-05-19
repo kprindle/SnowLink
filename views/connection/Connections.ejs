@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs')%>
+<img src="images/connectionsPageImage.JPG" alt="" class="left">
+<div class = "connectionsContent">  
+    <%if(connections.length){%>
+        <h1>Lessons</h1><ul class="list">
+        <%connections.forEach(connection=>{%>
+             <%if(connection.topic == 'Lesson'){%>
+                    <li><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
+                    <%}})%></ul>
+
+            <h1>Events</h1><ul class="list">
+            <%connections.forEach(connection=>{%>  
+                <%if(connection.topic == 'Event'){%>
+                    <li><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
+            <%}});%></ul>
+
+    <%} else {%>
+        <p>there are no connections to display</p>
+    <%}%>
+</div>
+
+<%- include('../partials/footer.ejs')%>

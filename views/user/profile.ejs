@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs')%>
+<div class = "connectionsContent">
+    <h1>Welcome, <%=user.firstName%></h1>
+    <%if(connections.length){%>
+        <h2>Your Lessons</h2><ul class="list">
+        <%connections.forEach(connection=>{%>
+             <%if(connection.topic == 'Lesson'){%>
+                    <li><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
+                    <%}})%></ul>
+
+            <h2>Your Events</h2><ul class="list">
+            <%connections.forEach(connection=>{%>  
+                <%if(connection.topic == 'Event'){%>
+                    <li><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
+            <%}});%></ul>
+
+    <%} else {%>
+        <p>You have not created any connections</p>
+    <%}%>
+
+
+    <%if(rsvps.length){%>
+        <br>
+        <h2>you have rsvp'd to the following connection</h2>
+        <ul>
+        <%rsvps.forEach(rsvp=>{
+        if(rsvp.user == user.id){%>
+            <li><p><%=rsvp.rsvp.toUpperCase()%>: <%=rsvp.connection.title%></p><form>
+                <button type = "submit" formmethod = "POST" formaction = "/connections/<%= rsvp.connection.id%>/rsvp?_method=DELETE">Delete</button>
+                <button type = "submit" formmethod = "GET" formaction = "/connections/<%= rsvp.connection.id%>">Update</button></form></li>
+                
+        <%}})%></ul>
+        
+
+    <%} else {%>
+        <h4>You have not rsvp'd to any connection</h4>
+    <%}%>
+    </div>
+    <%- include('../partials/footer.ejs')%>

@@ -1,0 +1,265 @@
+
+/* header */
+.header {
+    background-size:contain;
+    background-position: top;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.logo {
+    height: 10%;
+    width: 10%;
+    padding-top: 0%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+.navbarRight{
+    text-align: end;
+    min-width:3%;
+    padding-right: 3%;
+    list-style-type: none;
+    margin: auto;
+    font-style: unset;
+    color: antiquewhite;
+}
+.navBarLeft{
+    padding: 2%;
+    color: antiquewhite;
+}
+li{
+    padding-top: 2%;
+}
+
+/* links */
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 1%;
+    text-align: justify;
+}
+a:hover{
+    color: red;
+}
+.connectionsContent a:hover {
+    color: red;
+}
+
+/* content colors*/
+
+h1{
+    color:  white;
+}
+h3{
+    color: white;
+}
+p{
+    font-size: 16px;
+    color: white;
+}
+img.content{
+    float: right;
+    color: white;
+}
+label{
+    color: white;
+}
+
+/* content position */
+
+.fourmPosition{
+    padding-left: 30%;
+}
+
+.content{
+    border: none;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 20%;
+    padding-right: 20%;
+    /* background-image: url(../images/snow.jpg); */
+    background-repeat: no-repeat;
+    background-size: 50%, 50%;
+    background-position: 50%, 5%;
+    border-top: 5px dotted rgb(6, 9, 46);
+    border-bottom: 5px dotted rgb(6, 9, 46);
+    border-right: none;
+    border-left: none;
+    
+}
+
+.connectionsContent{
+    border: none;
+    color: white;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 40%;
+    padding-right: 25%;
+    /* background-image: url(../images/snow.jpg); */
+    background-repeat: no-repeat;
+    background-size: 50%, 50%;
+    background-position: 50%, 5%;
+    border-top: 5px dotted rgb(6, 9, 46);
+    border-bottom: 5px dotted rgb(6, 9, 46);
+    border-right: none;
+    border-left: none;
+}
+
+.newConnectionContent{
+    border: none;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    /* background-image: url(../images/snow.jpg); */
+    background-repeat: no-repeat;
+    background-size: 50%, 50%;
+    background-position: 50%, 5%;
+    border-top: 5px dotted rgb(6, 9, 46);
+    border-bottom: 5px dotted rgb(6, 9, 46);
+    border-right: none;
+    border-left: none;
+}
+.connectionDetailContent{
+    border: none;
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-left: 20%;
+    padding-right: 20%;
+    /* background-image: url(../images/snow.jpg); */
+    background-repeat: no-repeat;
+    background-size: 50%, 50%;
+    background-position: 50%, 5%;
+    border-top: 5px dotted rgb(6, 9, 46);
+    border-bottom: 5px dotted rgb(6, 9, 46);
+    border-right: none;
+    border-left: none;
+}
+.connectionDetailContent p{
+    padding: 2%;
+}
+
+
+.loginContent{
+    border: none;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    padding-left: 35%;
+    padding-right: 20%;
+    /* background-image: url(../images/snow.jpg); */
+    background-repeat: no-repeat;
+    background-size: 50%, 50%;
+    background-position: 50%, 5%;
+    border-top: 5px dotted rgb(6, 9, 46);
+    border-bottom: 5px dotted rgb(6, 9, 46);
+    border-right: none;
+    border-left: none;
+}
+
+/* footer */
+.footer{
+    border: none;
+    color: white;
+    padding: 2%;
+}
+
+.lesson{
+    height: 30%;
+    width: 30%;
+    float: right;
+}
+
+.floatLeft{
+    float:left;
+    padding-bottom: 10%;
+    color:white;
+}
+.list{
+    list-style-type: none;
+}
+.front{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+.hoverRed :hover{
+    color: red;
+}
+.floatMiddle{
+    text-align: center;
+}
+.email{
+    color:wite;
+}
+.title{
+    color: white;
+    text-align: center;
+}
+
+.left{
+    height: 15%;
+    width: 15%;
+    float: left;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+.right{
+    height: 15%;
+    width: 15%;
+    float: right;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+.rightConnection{
+    height: 15%;
+    width: 15%;
+    float: right;
+    padding-right: 20%;
+    padding-top: 10%;
+}
+
+.center{
+    text-align: center;
+}
+
+.fixed-width{
+    width: 300px;
+}
+
+.align-right{
+    text-align: right;
+    }
+
+.content td {
+    color: antiquewhite;
+}
+input, textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    }
+.floatRight{
+    float: right;
+    color: white
+}
+.background{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: bottom;
+} 
+
+/* flash */
+.success {
+    background-size: 50%;
+    color:chartreuse;
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  
+  .error {
+    color: red;
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px;
+  }

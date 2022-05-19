@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+        <h1 class="fourmPosition">Edit Your Information</h1>
+        <form method = "POST" action = "/rsvp/<%= rsvp.id%>?_method=PUT">
+            <table>
+                <tr>
+                        <td><label for="firstName">First Name: </label></td>
+                            <td><input type="text" id="firstName" name="firstName" value="<%= rsvp.firstName%>" class = "fixed-width"></td>
+                </tr>
+                <tr>
+                        <td><label for="lastName">Last Name: </label></td>
+                            <td><input type="lastName" id="lastName" name="lastName" value="<%=rsvp.lastName%>"class = "fixed-width"></td>
+                </tr>
+                <tr>
+                        <td><label for="Age">Age: </label></td>
+                            <td><input type="number" id="Age" name="Age" value="<%= rsvp.Age%>" class="fixed-width"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">email: </label></td>
+                        <td><input type="email" id="email" name="email" value="<%=rsvp.email%>" class="fixed-width"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone: </label></td>
+                        <td><input type="phone" id="phone" name="phone" value="<%= rsvp.phone%>" class="fixed-width"></td>
+                </tr>
+                <td colspan="2" class = "align-right"><button>Update Information</button></td>
+                </table>
+        </form>
+    </div>
+<%- include('../partials/footer.ejs')%>

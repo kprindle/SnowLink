@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs')%>
+
+</div>
+<div class = "connectionDetailContent">
+    <!-- <img src="<%= connection.image%>" alt="beginner lessons" class = "lesson"> --> 
+
+    <h1><%=connection.title%></h1>
+    <p>Hosted by: <%=connection.hostName%></p>
+    <p>details: <%=connection.details%></p>
+    <p>Date: <%=connection.date%></p>
+    <p>Time: <%=connection.startTime%></p>
+    <p>Location: <%=connection.location%></p>
+    <%if(user){%>
+    <%if(user == connection.author._id){%>
+        <form>
+        <h4>options:</h4>
+            <button type = "submit" formmethod = "GET" formaction = "/connections/<%= connection.id%>/edit">Update</button>
+            <button type = "submit" formmethod = "POST" formaction = "/connections/<%= connection.id%>?_method=DELETE">Delete</button>
+        </form>
+    <%} else { %>
+        <form>
+        <h5><%=rsvps.length%>People are going</h5>   
+        <h4>Will You be Attending?</h4>
+            <button type = "submit" formmethod = "POST" formaction = "/connections/<%= connection.id%>/rsvp" name="rsvp" value="yes">Yes</button>
+            <button type = "submit" formmethod = "POST" formaction = "/connections/<%= connection.id%>/rsvp" name="rsvp" value="no">No</button>
+            <button type = "submit" formmethod = "POST" formaction = "/connections/<%= connection.id%>/rsvp" name='rsvp' value="maybe">Maybe</button>
+        </form>
+    <%}%>
+    <%}%>
+</div>
+
+<%- include('../partials/footer.ejs')%>

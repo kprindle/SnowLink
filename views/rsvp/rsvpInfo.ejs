@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs')%>
+</div>
+<div class = "connectionDetailContent">
+    <!-- <img src="<%= connection.image%>" alt="beginner lessons" class = "lesson"> --> 
+
+    <h2><%=rsvp.fistName%></h2>
+    <h2><%=rsvp.lastName%></h2>
+    <h2><%=rsvp.Age%></h2>
+    <h2><%=rsvp.email%></h2>
+    <h2><%=rsvp.phone%></h2>
+    <%if(user == rsvp.userID){%>
+        <form>
+            <button type = "submit" formmethod = "GET" formaction = "/rsvp/<%= rsvp.id%>/edit">Edit</button>
+            <button type = "submit" formmethod = "POST" formaction = "/rsvp/<%= rsvp.id%>?_method=DELETE">Delete</button>
+         </form>
+        <%}%>
+</div>
+
+<%- include('../partials/footer.ejs')%>

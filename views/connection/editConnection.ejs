@@ -1,0 +1,90 @@
+<%- include('../partials/header.ejs')%>
+<div class="content">
+	<form method="POST" action="/connections/<%= connection.id%>?_method=PUT">
+		<table>
+			<!-- Title -->
+			<tr>
+				<td><label for="title">Title</label></td>
+				<td>
+					<input
+						type="text"
+						id="title"
+						name="title"
+						value="<%= connection.title%>"
+						class="fixed-width"
+					/>
+				</td>
+			</tr>
+
+			<!-- Date -->
+			<tr>
+				<td><label for="date">Date</label></td>
+				<td>
+					<input
+						type="date"
+						id="date"
+						name="date"
+						class="fixed-width"
+						value="<%= connection.date%>"
+					/>
+				</td>
+			</tr>
+
+			<!-- Time -->
+			<tr>
+				<td><label for="startTime">Time</label></td>
+				<td>
+					<input
+						type="time"
+						id="startTime"
+						name="startTime"
+						class="fixed-width"
+						value="<%= connection.startTime%>"
+					/>
+				</td>
+			</tr>
+
+			<!-- Host -->
+			<tr>
+				<td><label for="hostName">Host</label></td>
+				<td>
+					<input
+						type="text"
+						id="hostName"
+						name="hostName"
+						value="<%= connection.hostName%>"
+						class="fixed-width"
+					/>
+				</td>
+			</tr>
+
+			<!-- details  -->
+			<tr>
+				<td class="align-top"><label for="details">Content</label></td>
+				<td>
+					<textarea rows="5" id="details" name="details" class="fixed-width"><%= connection.details%></textarea>
+				</td>
+			</tr>
+
+			<!-- location -->
+			<tr>
+				<td><label for="location">location</label></td>
+				<td>
+					<input
+						type="text"
+						id="location"
+						name="location"
+						value="<%= connection.location%>"
+						class="fixed-width"
+					/>
+				</td>
+			</tr>
+
+			<!-- submit button  -->
+			<tr>
+				<td colspan="2" class="align-right"><button>Submit</button></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<%- include('../partials/footer.ejs')%>
